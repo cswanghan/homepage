@@ -10,8 +10,9 @@
       "dest": "/TECH_ARCHITECTURE_REPORT_COMPLETE.html"
     },
     {
-      "src": "/(.*)",
-      "dest": "/TECH_ARCHITECTURE_REPORT_COMPLETE.html"
+      "src": "/[^.]+",
+      "dest": "/TECH_ARCHITECTURE_REPORT_COMPLETE.html",
+      "status": 200
     }
   ]
 }
