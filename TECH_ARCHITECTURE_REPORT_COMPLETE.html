@@ -38,7 +38,15 @@
         }
 
         .sidebar-nav.collapsed {
-            left: -200px;
+            width: 0;
+            padding: 120px 0 60px 0;
+            overflow: hidden;
+        }
+
+        .sidebar-nav.collapsed .nav-list,
+        .sidebar-nav.collapsed .nav-title {
+            opacity: 0;
+            visibility: hidden;
         }
 
         /* Toggle Button - Minimalist */
@@ -158,6 +166,11 @@
             margin-left: 0;
         }
 
+        /* Smooth transition for collapsed state */
+        .sidebar-nav.collapsed + .container {
+            margin-left: 0;
+        }
+
         .slide {
             width: 100%;
             min-height: 100vh;
@@ -228,14 +241,18 @@
         @media (max-width: 1024px) {
             .sidebar-nav {
                 width: 180px;
-                left: -180px;
             }
 
-            .sidebar-nav:hover {
-                left: 0;
+            .sidebar-nav.collapsed {
+                width: 0;
             }
 
             .container {
+                margin-left: 180px;
+                transition: margin-left 0.2s ease;
+            }
+
+            .sidebar-nav.collapsed + .container {
                 margin-left: 0;
             }
 
@@ -2015,28 +2032,6 @@
                 </ul>
             </div>
 
-            <h3>演进路线图</h3>
-            <div class="flow-diagram">
-                <div class="flow-box" style="border-color: #cc0000; color: #cc0000;">教务系统组 ✓</div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-box">教学系统组</div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-box">应用层</div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-box">对接层</div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-box">生产上线</div>
-            </div>
-
-            <div class="summary-box" style="margin-top: 80px;">
-                <h3>感谢聆听</h3>
-                <p style="font-size: 16px; margin-top: 32px; color: #666;">
-                    智慧校园系统技术架构汇报完毕
-                </p>
-                <p style="font-size: 12px; margin-top: 24px; color: #999; letter-spacing: 1px;">
-                    11 PROJECTS · 3 GROUPS · 2025.12.10
-                </p>
-            </div>
         </div>
     </div>
 
