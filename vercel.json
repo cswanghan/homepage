@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/TECH_ARCHITECTURE_REPORT_COMPLETE.html"
+    },
+    {
+      "src": "/index.html",
+      "dest": "/TECH_ARCHITECTURE_REPORT_COMPLETE.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/TECH_ARCHITECTURE_REPORT_COMPLETE.html"
+    }
+  ]
+}
